@@ -1,10 +1,10 @@
 # WorkTrackingApp
 Android mobile app that helps you keep track of your work (In-Progress)
 
-# Software 
+## Software 
 - Built using Android Studio
 
-# Lanuguage
+## Lanuguage
 - Kotlin
 
 ## Dashboard/Calculator/Calendar/Side-Menu
