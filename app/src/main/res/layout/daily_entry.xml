@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:id="@+id/Layout" android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/EntryDate"
+            app:layout_constraintTop_toTopOf="parent" android:background="#efefef">
+
+        <TextView
+                android:text="June 18, 2019 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Date"
+                android:fontFamily="@font/roboto" android:textColor="#000000" android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/bar" android:layout_marginStart="8dp"/>
+        <View
+                android:id="@+id/bar"
+                android:layout_width="5dp"
+                android:layout_height="20dp"
+                android:background="#5E35B1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EntryDate"
+            app:layout_constraintEnd_toEndOf="parent" android:background="#FFFFFF" android:visibility="visible"
+            android:id="@+id/EntryData">
+
+        <TextView
+                android:text="$147.20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Earned"
+                android:textColor="#00C853"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:text="30m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BreakTime"
+                app:layout_constraintStart_toEndOf="@+id/TextViewBreakTitle"
+                android:layout_marginStart="4dp"
+                app:layout_constraintTop_toTopOf="@+id/TextViewBreakTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/TextViewBreakTitle"/>
+        <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Overtime"
+                app:layout_constraintStart_toEndOf="@+id/OvertimeTitle"
+                app:layout_constraintTop_toTopOf="@+id/OvertimeTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/OvertimeTitle"
+                android:layout_marginStart="4dp"/>
+        <TextView
+                android:text="Overtime:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/OvertimeTitle"
+                app:layout_constraintStart_toEndOf="@+id/colorLayout" android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/TextViewBreakTitle"
+                android:textStyle="bold"/>
+        <TextView
+                android:text="Break:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextViewBreakTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/colorLayout"
+                android:layout_marginStart="8dp" android:textStyle="bold"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:background="#FF6D00"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:id="@+id/colorLayout"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                    android:text="4:00 PM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Endtime" android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/Starttime"
+                    android:fontFamily="@font/roboto"
+                    app:layout_constraintTop_toBottomOf="@+id/Starttime" android:layout_marginTop="4dp"
+            />
+            <TextView
+                    android:text="10:30 AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Starttime" android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/roboto" android:layout_marginEnd="3dp"
+            />
+            <TextView
+                    android:text="9h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HoursWorked" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Endtime" android:layout_marginEnd="8dp"
+                    android:textColor="#FFFFFF" android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:text="$14.5/hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/Earned"
+                android:id="@+id/PayRate" app:layout_constraintTop_toBottomOf="@+id/Earned" android:textSize="12sp"/>
+        <TextView
+                android:text="PAID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/PaidBreak" app:layout_constraintStart_toEndOf="@+id/BreakTime"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/BreakTime"
+                app:layout_constraintBottom_toBottomOf="@+id/BreakTime" android:textColor="@color/colorAccent"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:rotation="-25"
+                android:layout_height="50dp" app:srcCompat="@drawable/ic_paid"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/PaidState"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="120dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WorkHoursTracker</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_calculator">Calculator</string>
+    <string name="menu_calender">Calender</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+</resources>

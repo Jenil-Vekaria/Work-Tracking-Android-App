@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/scrollView3"
+            app:layout_constraintBottom_toTopOf="@+id/btn_calculate" app:layout_constraintTop_toTopOf="parent"
+    >
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:layout_marginBottom="8dp"
+                      android:layout_marginTop="8dp"
+        >
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PayRateLayout">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                >
+
+                    <View
+                            android:id="@+id/PayRateDivider"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#A2A2A2"
+                            app:layout_constraintStart_toStartOf="@+id/PayRateTitlte"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintTop_toBottomOf="@+id/PayRateSelect"
+                            android:layout_marginEnd="16dp"/>
+                    <TextView
+                            android:text="Pay Rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/PayRateTitlte" android:textSize="16sp"
+                            android:fontFamily="@font/roboto"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:ems="10"
+                            android:id="@+id/PayRateSelect"
+                            android:fontFamily="@font/roboto" android:textColor="#000000"
+                            android:paddingLeft="16dp"
+                            android:textSize="15sp" android:background="@color/transparent"
+                            app:layout_constraintStart_toStartOf="@+id/PayRateTitlte" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/PayRateTitlte"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/StartTimeVerticalLayout"
+            >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                >
+
+                    <View
+                            android:id="@+id/StartTimeDivider"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#A2A2A2"
+                            app:layout_constraintStart_toStartOf="@+id/StartTimeTitle"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/StartDate"
+                            app:layout_constraintHorizontal_bias="0.0"/>
+                    <TextView
+                            android:text="Start Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/StartTimeTitle" android:textSize="16sp"
+                            android:fontFamily="@font/roboto"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="24dp"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                            android:text="Current Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                            android:id="@+id/StartDate" app:layout_constraintStart_toStartOf="@+id/StartTimeTitle"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/StartTimeTitle" android:fontFamily="@font/roboto"
+                            android:textColor="#000000" android:textSize="16sp"/>
+                    <TextView
+                            android:text="7:00 AM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                            android:id="@+id/StartTime"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/StartTimeTitle" android:fontFamily="@font/roboto"
+                            android:textColor="#000000" android:textSize="16sp"
+                            app:layout_constraintVertical_bias="1.0" app:layout_constraintStart_toEndOf="@+id/StartDate"
+                            android:layout_marginStart="40dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EndTimeVerticalLayout"
+            >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                >
+
+                    <View
+                            android:id="@+id/EndTimeDivider"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#A2A2A2"
+                            app:layout_constraintStart_toStartOf="@+id/EndTimeTitle"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/EndDate"
+                            app:layout_constraintHorizontal_bias="0.0"/>
+                    <TextView
+                            android:text="End Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EndTimeTitle" android:textSize="16sp"
+                            android:fontFamily="@font/roboto"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="24dp"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                            android:text="Current Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="40dp"
+                            android:id="@+id/EndDate" app:layout_constraintStart_toStartOf="@+id/EndTimeTitle"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/EndTimeTitle" android:fontFamily="@font/roboto"
+                            android:textColor="#000000" android:textSize="16sp"/>
+                    <TextView
+                            android:text="7:00 PM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="40dp"
+                            android:id="@+id/EndTime"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/EndTimeTitle" android:fontFamily="@font/roboto"
+                            android:textColor="#000000" android:textSize="16sp"
+                            app:layout_constraintVertical_bias="1.0" app:layout_constraintStart_toEndOf="@+id/EndDate"
+                            android:layout_marginStart="40dp"/>
+                    <TextView
+                            android:text="Duration:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/ShiftDurationTile"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginStart="16dp"
+                    />
+                    <TextView
+                            android:text="12 hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Duration" app:layout_constraintStart_toEndOf="@+id/ShiftDurationTile"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/ShiftDurationTile"
+                            app:layout_constraintTop_toTopOf="@+id/ShiftDurationTile"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BreaksLayout" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="0dp" android:layout_marginRight="0dp"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <View
+                            android:id="@+id/divider9"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#A2A2A2"
+                            app:layout_constraintStart_toStartOf="@+id/BreakTitle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/BreakDuration"/>
+                    <TextView
+                            android:text="0h 00m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/BreakDuration"
+                            app:layout_constraintStart_toStartOf="@+id/BreakTitle"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/BreakTitle"
+                            android:fontFamily="@font/roboto" android:textSize="16sp" android:textColor="#000000"/>
+                    <TextView
+                            android:text="Break "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/BreakTitle" app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/roboto"
+                            android:textSize="16sp"
+                            android:layout_marginStart="16dp" android:layout_marginTop="8dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/PaidBreaksLayout" android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:text="Paid Breaks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/PaidBreakTitle"
+                            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="16sp"/>
+                    <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/paidBreakToggle"
+                            app:layout_constraintTop_toBottomOf="@+id/PaidBreakTitle"
+                            app:layout_constraintStart_toStartOf="@+id/PaidBreakTitle"
+                            android:textOn="Paid" android:textOff="NotPaid" android:editable="false"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/OvertimeLayout">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="Overtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/OvertimeTitle" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="24dp"
+                            app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/roboto"
+                            android:textSize="16sp"/>
+                    <TextView
+                            android:text="0h 00m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/OvertimeDuration"
+                            app:layout_constraintStart_toStartOf="@+id/OvertimeTitle"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/OvertimeTitle"
+                            android:fontFamily="@font/roboto" android:textSize="16sp" android:textColor="#000000"/>
+                    <View
+                            android:id="@+id/divider6"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#A2A2A2"
+                            app:layout_constraintStart_toStartOf="@+id/OvertimeTitle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/OvertimeDuration"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:text="Save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_calculate"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold" android:textColor="#64DD17" android:fontFamily="@font/roboto"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

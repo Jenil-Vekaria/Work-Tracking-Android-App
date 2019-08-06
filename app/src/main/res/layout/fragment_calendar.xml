@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="#FFFFFF">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewCurrentDate" android:textStyle="bold"
+            android:textSize="20sp" android:textColor="#000000"
+            android:text="Month Date, Year"
+            app:layout_constraintTop_toBottomOf="@+id/compactcalendar_view" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="250dp"
+            app:compactCalendarTargetHeight="300dp"
+            app:compactCalendarTextSize="12sp"
+            app:compactCalendarTextColor="#3C3C3C"
+            app:compactCalendarMultiEventIndicatorColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:compactCalendarEventIndicatorStyle="small_indicator"
+            app:compactCalendarCurrentSelectedDayTextColor="#3cbeb2"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#00000000" android:background="#FFFFFF"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="parent" app:compactCalendarCurrentDayTextColor="#3cbeb2"
+            app:compactCalendarCurrentSelectedDayIndicatorStyle="no_fill_large_indicator"
+            app:compactCalendarCurrentDayIndicatorStyle="no_fill_large_indicator"
+            app:compactCalendarCurrentDayBackgroundColor="#3cbeb2"/>
+
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="#D3D3D3"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewCurrentDate"/>
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#B6B3B3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/MonthOverallDataComponent"
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:background="#FAFAFA"
+            android:id="@+id/MonthOverallDataComponent">
+
+        <TextView
+                android:text="Total Hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/TextViewMonthlyTotalHoursWorkedTitle"
+                android:fontFamily="@font/roboto" android:textColor="#000000" android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+        />
+        <TextView
+                android:text="Overtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMonthlyOvertimeWorkTitle"
+                android:fontFamily="@font/roboto" android:textColor="#000000" android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/TextViewMonthlyTotalHoursWorked"
+                android:layout_marginStart="32dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="48 hours 22 Minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextViewMonthlyTotalHoursWorked"
+                android:fontFamily="@font/roboto" android:textColor="#000000" android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewMonthlyTotalHoursWorkedTitle"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/TextViewMonthlyTotalHoursWorkedTitle"/>
+        <TextView
+                android:text="3 Hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMonthlyTotalHoursWorked3"
+                android:fontFamily="@font/roboto" android:textColor="#000000" android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMonthlyOvertimeWorkTitle"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMonthlyOvertimeWorkTitle"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:text="$956.89"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/TextViewMontlyEarnedMoney" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" android:fontFamily="@font/roboto" android:textColor="#00C853"
+                android:textSize="20sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/divider2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" android:background="#efefef"
+            android:id="@+id/SingleDayDataComponent"
+            app:layout_constraintBottom_toTopOf="@+id/divider3">
+
+
+        <TextView
+                android:text="No Entry "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextViewNoEntryTitle"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toStartOf="@+id/CalenderLogo" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/CalenderLogo"
+                app:layout_constraintEnd_toEndOf="@+id/CalenderLogo" android:textColor="#000000"/>
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/AddEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fab_add"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp">
+        </com.github.clans.fab.FloatingActionButton>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" app:srcCompat="@drawable/ic_dashboard_entry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/CalenderLogo"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/AddEntry"
+                android:visibility="invisible"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:id="@+id/RecylerViewEntry"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
